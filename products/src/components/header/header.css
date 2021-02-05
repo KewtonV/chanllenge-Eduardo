@@ -1,0 +1,14 @@
+#header-app {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-width: 1px;
+    border-bottom-color: #232323;
+    border-bottom-style: solid;
+}
+#header-app h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
