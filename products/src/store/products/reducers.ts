@@ -1,13 +1,15 @@
-import { Product } from "../../models/product";
+import { initProduct, Product } from "../../models/product";
 import { ProductType, Action } from "./types";
 
 export interface ProductsState {
     id: number,
+    productForm: Product,
     products: Product[]
 }
 
 const initialState = {
     id: 1,
+    productForm: initProduct(),
     products: [
         {
             id: 0,
@@ -28,6 +30,7 @@ export const productsReducer = (state: ProductsState = initialState, action: Act
             return {
                 ...state,
                 id: state.id + 1,
+                productForm: initProduct(),
                 products: [...state.products, product]
             }
         }
@@ -36,6 +39,7 @@ export const productsReducer = (state: ProductsState = initialState, action: Act
                 item.id === action.payload.id ? action.payload : item)
             return {
                 ...state,
+                productForm: initProduct(),
                 products: [...products]
             }
         }
@@ -45,6 +49,18 @@ export const productsReducer = (state: ProductsState = initialState, action: Act
             return {
                 ...state,
                 products: [...state.products]
+            }
+        }
+        case ProductType.CLICK_CREATE_PRODUCT: {
+            return {
+                ...state,
+                productForm: action.payload
+            }
+        }
+        case ProductType.CLICK_UPDATE_PRODUCT: {
+            return {
+                ...state,
+                productForm: action.payload
             }
         }
         default: return state

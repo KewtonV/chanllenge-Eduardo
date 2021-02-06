@@ -1,4 +1,4 @@
-import { Product } from "../../models/product";
+import { initProduct, Product } from "../../models/product";
 import { ProductType, Action } from "./types";
 
 export function createProduct(product: Product): Action {
@@ -18,6 +18,20 @@ export function updateProduct(product: Product): Action {
 export function removeProduct(product: Product): Action {
     return {
         type: ProductType.REMOVE_PRODUCT,
+        payload: product
+    }
+}
+
+export function clickCreateProduct(): Action {
+    return {
+        type: ProductType.CLICK_CREATE_PRODUCT,
+        payload: initProduct()
+    }
+}
+
+export function clickUpdateProduct(product: Product): Action {
+    return {
+        type: ProductType.CLICK_UPDATE_PRODUCT,
         payload: product
     }
 }
