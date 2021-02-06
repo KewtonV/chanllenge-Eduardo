@@ -2,7 +2,8 @@ export interface Product {
     id: number;
     name: string;
     price: number;
-    quantidad: number
+    quantidad: number;
+    description: string;
 }
 
 export function initProduct(): Product{
@@ -10,6 +11,7 @@ export function initProduct(): Product{
         id: -1,
         name: '',
         price: 0.0,
-        quantidad: 0
+        quantidad: 0,
+        description: ''
     }
 }
