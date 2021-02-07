@@ -1,46 +1,46 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Challenge SERVNAC - TECprodutos
 
-## Available Scripts
+Este projeto é um desafio para o grupo Servnac para a vaga de Desenvolvedor React. Se consiste em um CRUD de produtos feitos com React e Redux.
 
-In the project directory, you can run:
+1. Como Usar
 
-### `yarn start`
+    O uso é bem simples, ao iniciar o sistema, o usuário o sistema mostra os produtos armazenados na aplicação. Ao apertar a opção “Adicionar novo produto” o sistema mostra um modal para o usuário passar as informações e adicionar na lista de produtos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    Além disso, para cada produto cadastrado, o usuário possui uma opção de editar um produto a partir de outro modal e excluir um produto cadastrado.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2.  Detalhes do Código.
 
-### `yarn test`
+    O projeto “TECprodutos” foi realizado em React JS com template Typescript, e consiste em apenas Front-end. Foi adicionado às bibliotecas “redux” e “react-redux” para fazer o armazenamento de dados e a biblioteca “react-icons” para adição de ícones para a aplicação.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    O projeto é dividido em quatro partes principais, a primeira parte é a pasta “store” que armazena o objeto “products” que é um array de produtos. Foi feito em uma pasta “products” e dentro há três arquivos “action” para as ações, ”types” que informa os tipos e “reducer” que manipula o objeto.
 
-### `yarn build`
+    A segunda parte é a pasta “models” que armazena as interfaces de objetos manipulados pelo projeto, que no caso, possui apenas um arquivo, “Product”.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    A terceira parte são as pastas “components” e “pages” que são o código react com html. Os “components” são componentes usados e/ou reusados durante a aplicação, são eles “header”, “footer” e “input”. As “pages” são os componentes principais da aplicação, são os arquivos “dashboard” que mostra a lista de produtos armazenados no aplicativo e “addProduct” que adiciona ou edita os produtos pelo usuário.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    E a última parte é a pasta “Styles” que é dividida em duas partes, estilos para “components” e para “pages” em que cada componente possui um arquivo em styles.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start e Build do projeto
 
-### `yarn eject`
+    Para usar o projeto “TECprodutos” entre na pasta do projeto com o comando:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+        cd products
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    Assim que entra na pasta do projeto, execute o comando:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+        yarn install ou yarn
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    Assim que terminar de baixar as dependências, se quiser executar como desenvolvedor faça o comando:
 
-## Learn More
+        yarn start
+    
+    Logo após terminar a execução do comando, entre no “http://localhost:3000” em seu browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Se quiser executar a build do projeto, execute o comando:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+        yarn build
+    
+    Vai ser criado uma pasta "build" com o projeto.
+    
+    Obrigado por ler até aqui, e que tenha aproveitado bem do pequeno projeto "TECprodutos".
