@@ -15,8 +15,7 @@ const initialState = {
             id: 0,
             name: 'Notebook LG',
             price: 2299.99,
-            quantidad: 2,
-            description: ''
+            quantidad: 2
         }
     ]
 }
