@@ -14,7 +14,6 @@
 }
 
 #dashboard .title button {
-    width: 180px;
     height: 40px;
     background-color: var(--color-blue);
     border-radius: 10px;
@@ -22,8 +21,9 @@
     cursor: pointer;
     transition: 0.5s;
     color: var(--color-text-white);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
+    font-family: 'Montserrat';
 }
 
 #dashboard .title button:hover {
@@ -48,8 +48,10 @@
     width: 100%;
     display: flex;
 }
-#dashboard table td.border {
-    border-left: 1px ;
+
+#dashboard table td.border,
+#dashboard table th.border {
+    border-left: 0px ;
 }
 
 #dashboard table td, 
@@ -74,43 +76,55 @@
     align-items: center;
 }
 
-.modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0,0,0,0.8);
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-.modal:target {
-    opacity: 1;
-    pointer-events: auto;
-}
-.modal > div {
-    width: 400px;
-    position: relative;
-    margin: 15% auto;
-    padding: 15px 20px;
-    background: #fff;
-}
-.fechar {
-    position: absolute;
-    width: 30px;
+#dashboard table td button {
     height: 30px;
-    right: -15px;
-    top: -15px;
-    text-align: center;
-    background: #ff4545;
-    border-radius: 50%;
-    font-size: 16px;
-    color: #8d0000;
+    width: 30px;
+    margin: 2px;
+    border-radius: 3px;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#dashboard table td button.edit {
+    background-color: var(--color-blue);
+}
+#dashboard table td button.edit:hover {
+    background-color: var(--color-blue-secundary);
+}
+#dashboard table td button.delete {
+    background-color: var(--color-red);
+}
+#dashboard table td button.delete:hover {
+    background-color: var(--color-red-secundary);
+}
+
+#dashboard .not-products {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dashboard .not-products span {
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 480px) {
+    #dashboard .title {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    #dashboard .title h2 {
+        margin: 10px 0px;
+    }
+}
+@media only screen and (max-width: 580px) {
+    #dashboard .title {
+        width: 100%;
+    }
 }
