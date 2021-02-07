@@ -1,0 +1,92 @@
+#add-product {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-product h2 {
+    margin: 0px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--color-border);
+    padding: 10px 10px;
+}
+
+#add-product .action {
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    margin-top: 10px;
+    padding: 10px 10px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#add-product .action button {
+    height: 30px;
+    width: 100px;
+    color: var(--color-text-white);
+    border: none;
+    border-radius: 8px;
+    cursor:pointer;
+    transition: 0.4s;
+    margin-left: 10px;
+    font-family: 'Montserrat';
+}
+
+#add-product .action button.cancel {
+    background-color: var(--color-red);
+}
+#add-product .action button.cancel:hover{
+    background-color: var(--color-red-secundary);
+}
+
+#add-product .action button.save {
+    background-color: var(--color-blue);
+}
+#add-product .action button.save:hover{
+    background-color: var(--color-blue-secundary);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal > div {
+    width: 400px;
+    position: relative;
+    margin: 15% auto;
+    background: #fff;
+}
+.fechar {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: -15px;
+    top: -15px;
+    background-color: var(--color-red);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fechar:hover {
+    background-color: var(--color-red-secundary);
+}
+
+@media only screen and (max-width: 500px) {
+    .modal > div {
+        width: 90%;
+    }
+}
