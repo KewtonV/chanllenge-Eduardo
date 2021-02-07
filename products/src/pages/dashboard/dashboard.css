@@ -4,5 +4,113 @@
     width: 90%;
     align-items: center;
     height: 100%;
-    background-color: aquamarine;
+}
+
+#dashboard .title {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+}
+
+#dashboard .title button {
+    width: 180px;
+    height: 40px;
+    background-color: var(--color-blue);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    color: var(--color-text-white);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#dashboard .title button:hover {
+    background-color: var(--color-blue-secundary);
+    transition: 0.5s;
+}
+
+#dashboard table {
+    width: 100%;
+    background-color: var(--color-text-white);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+}
+
+#dashboard table thead {
+    background-color: var(--color-blue);
+    color: var(--color-text-white);
+}
+
+#dashboard table tr {
+    width: 100%;
+    display: flex;
+}
+#dashboard table td.border {
+    border-left: 1px ;
+}
+
+#dashboard table td, 
+#dashboard table th {
+    flex: 1;
+    border-left: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 0px;
+}
+
+#dashboard table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#dashboard table td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal > div {
+    width: 400px;
+    position: relative;
+    margin: 15% auto;
+    padding: 15px 20px;
+    background: #fff;
+}
+.fechar {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: -15px;
+    top: -15px;
+    text-align: center;
+    background: #ff4545;
+    border-radius: 50%;
+    font-size: 16px;
+    color: #8d0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
