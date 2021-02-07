@@ -4,11 +4,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom-width: 1px;
-    border-bottom-color: #232323;
-    border-bottom-style: solid;
+    background-color: var(--color-blue);
 }
 #header-app h3 {
     font-size: 30px;
     font-weight: 700;
+    color: var(--color-text-white);
 }
