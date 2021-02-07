@@ -1,5 +1,7 @@
 import React from 'react'
 
+import '../styles/components/input.css'
+
 interface Props{
     label: string,
     value: string,
@@ -9,7 +11,7 @@ interface Props{
 
 export default function InputComponent({label, type = 'string', value, onChange}:Props) {
     return (
-        <div>
+        <div className="input">
             <label>{label}</label>
             <input type={type} value={value} onChange={onChange} />
         </div>
