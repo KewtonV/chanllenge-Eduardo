@@ -1,8 +1,9 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Product } from '../../models/product'
-import { clickUpdateProduct, removeProduct } from '../../store/products/action'
 
+import AddProduct from '../addProduct'
+import { Product } from '../../models/product'
+import { clickCreateProduct, clickUpdateProduct, removeProduct } from '../../store/products/action'
 import { ProductsState } from '../../store/products/reducers'
 
 import './dashboard.css'
@@ -16,6 +17,10 @@ export default function Dashboard() {
         dispatch(clickUpdateProduct(product))
     }
 
+    function handleClickCreate(){
+        dispatch(clickCreateProduct())
+    }
+
     function handleClickRemove(product: Product){
         console.log(product)
         dispatch(removeProduct(product))
@@ -23,7 +28,19 @@ export default function Dashboard() {
 
     return (
         <div id="dashboard">
-            <h1>Lista de Produtos Tec</h1>
+            <div className="title">
+                <h2>Lista de Produtos Tec</h2>
+                <a href="#modal">
+                    <button onClick={handleClickCreate}>Adicionar novo Produto
+                    </button>
+                </a>
+            </div>
+            <div id="modal" className="modal">
+                <div>
+                    <a href="#fechar" title="Fechar" className="fechar">x</a>
+                    <AddProduct />
+                </div>
+            </div>
             <table>
                 <thead>
                 <tr>
